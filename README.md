@@ -1,6 +1,6 @@
 # JobFill BD — Public Privacy Policy Website (`MR Software Studio`)
 
-Standalone static Privacy Policy website for **JobFill BD (v2.0.0 — First Public Release, Local-Only Storage Mode)** by **MR Software Studio**, prepared for hosting via **GitHub Pages** and Microsoft Edge Add-ons Store / Google Chrome Web Store privacy certification.
+Standalone static Privacy Policy website for **JobFill BD (v2.0.0)** by **MR Software Studio**, prepared for hosting via **GitHub Pages** for both **Microsoft Edge Add-ons Store** and **Google Chrome Web Store** compliance.
 
 - **Repository:** `https://github.com/Mahfuzar148/jobfill-bd-privacy`
 - **Git Remote:** `https://github.com/Mahfuzar148/jobfill-bd-privacy.git`
@@ -9,7 +9,7 @@ Standalone static Privacy Policy website for **JobFill BD (v2.0.0 — First Publ
 - **Contact:** [mahfuzar148@gmail.com](mailto:mahfuzar148@gmail.com)
 - **Live GitHub Pages URL:** `https://mahfuzar148.github.io/jobfill-bd-privacy/`
 
-> **v2.0.0 First Release Policy Scope:** Accurately documents strict Local-Only browser storage (AES-256-GCM IndexedDB Vault), active-tab autofill, read-only public job circular `GET` requests (`credentials: 'omit'`, zero PII), removal of broad `tabs` / unused `.edu.bd` permissions, and compile-time disabled/inactive Cloud Sync (`__JOBFILL_CLOUD_SYNC_DISABLED__=true`).
+> **Release Comparison Disclosure Scope:** Clearly distinguishes the **Microsoft Edge Store `v2.0.0` release** (`__JOBFILL_CLOUD_SYNC_DISABLED__=true` — Local-Only vault storage, Cloud Sync disabled & unreachable) from the **Google Chrome release** (`cloudSyncEnabled: false` by default, supporting optional user-configured Supabase Cloud Sync with client-side AES-256-GCM encryption for `profiles_bundle` & `activity_bundle`, non-E2EE Supabase Auth credentials/metadata, and strictly local document/photo/signature storage in `v2.0.0`), alongside read-only public job circular `GET` requests (`credentials: 'omit'`, zero PII).
 
 ## Contents
 
