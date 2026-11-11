@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light" />
-  <meta name="description" content="Official Privacy Policy for JobFill BD (Version 2.0.0) published by MR Software Studio — covering local-first vault storage, autofill webpage access, public job sources, and optional encrypted Supabase cloud sync." />
+  <meta name="description" content="Official Privacy Policy for JobFill BD (Version 2.0.0 — Local-Only First Public Release) published by MR Software Studio — covering encrypted local IndexedDB storage, active-tab autofill, read-only public job circular requests, and Cloud Sync Disabled release status." />
   <title>Privacy Policy — JobFill BD | MR Software Studio</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23065f46'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Arial,sans-serif' font-size='13' font-weight='bold' fill='white'%3EMR%3C/text%3E%3C/svg%3E" />
   <style>
@@ -165,6 +165,7 @@
       box-shadow: var(--shadow-sm);
       position: sticky;
       top: 20px;
+      min-width: 0;
     }
 
     .toc-title {
@@ -208,10 +209,6 @@
       border-radius: var(--radius-lg);
       padding: 36px 40px;
       box-shadow: var(--shadow-sm);
-      min-width: 0;
-    }
-
-    .toc-panel {
       min-width: 0;
     }
 
@@ -459,10 +456,10 @@
         <div class="brand-mark" aria-hidden="true">MR</div>
         <div>
           <div class="brand-name">MR Software Studio</div>
-          <div class="brand-sub">Official Privacy &amp; Data Protection Disclosure</div>
+          <div class="brand-sub">Official Privacy Policy &amp; Data Protection Disclosure</div>
         </div>
       </div>
-      <div class="product-pill">JobFill BD &middot; Version 2.0.0 &middot; Manifest V3</div>
+      <div class="product-pill">JobFill BD &middot; v2.0.0 &middot; Local-Only First Release</div>
     </div>
   </header>
 
@@ -471,22 +468,22 @@
       <h2 class="toc-title">Table of Contents</h2>
       <ol class="toc-list">
         <li><a href="#overview">1. Introduction &amp; Scope</a></li>
-        <li><a href="#local-storage">2. Data Collected &amp; Local Storage</a></li>
+        <li><a href="#local-storage">2. Local Storage Mechanisms</a></li>
         <li><a href="#personal-profile">3. Personal Profile Information</a></li>
-        <li><a href="#education-employment">4. Education &amp; Employment Information</a></li>
+        <li><a href="#education-employment">4. Education &amp; Employment Data</a></li>
         <li><a href="#documents-media">5. Documents, Photos &amp; Signatures</a></li>
-        <li><a href="#autofill-access">6. Autofill &amp; Active Webpage Access</a></li>
-        <li><a href="#public-job-sources">7. Public Job Circular Source Requests</a></li>
-        <li><a href="#cloud-sync">8. Optional Supabase Auth &amp; Encrypted Cloud Sync</a></li>
-        <li><a href="#third-party-transfers">9. Third-Party Services &amp; Data Transfers</a></li>
-        <li><a href="#encryption-security">10. Encryption &amp; Security Practices</a></li>
-        <li><a href="#consent-opt-in">11. User Consent &amp; Cloud Sync Opt-In/Out</a></li>
+        <li><a href="#autofill-access">6. Autofill &amp; Webpage Access</a></li>
+        <li><a href="#public-job-sources">7. Public Job Circular Requests</a></li>
+        <li><a href="#cloud-sync-disabled">8. Local-Only Release Status</a></li>
+        <li><a href="#third-party-transfers">9. Third-Party Data Disclosure</a></li>
+        <li><a href="#encryption-security">10. Encryption &amp; Security</a></li>
+        <li><a href="#consent-controls">11. User Consent &amp; Safety Controls</a></li>
         <li><a href="#retention-deletion">12. Data Retention &amp; Deletion</a></li>
         <li><a href="#backup-restore">13. Backup &amp; Restore</a></li>
-        <li><a href="#notifications">14. Notifications &amp; Job Reminders</a></li>
-        <li><a href="#permissions">15. Browser Permissions &amp; Purposes</a></li>
-        <li><a href="#user-rights">16. User Rights &amp; Privacy Controls</a></li>
-        <li><a href="#contact">17. Contact Information</a></li>
+        <li><a href="#notifications">14. Notifications &amp; Reminders</a></li>
+        <li><a href="#permissions">15. Browser Permissions</a></li>
+        <li><a href="#user-rights">16. User Rights &amp; Recovery Notice</a></li>
+        <li><a href="#contact">17. Contact &amp; Official Policy URL</a></li>
       </ol>
     </nav>
 
@@ -494,7 +491,8 @@
       <div class="policy-header">
         <h1>Privacy Policy for JobFill BD</h1>
         <div class="meta-grid">
-          <div class="meta-item"><strong>Product:</strong> JobFill BD (Browser Extension)</div>
+          <div class="meta-item"><strong>Product:</strong> JobFill BD (Browser Extension &mdash; Chrome &amp; Microsoft Edge MV3)</div>
+          <div class="meta-item"><strong>Version:</strong> 2.0.0 (First Public Release &mdash; Local-Only Storage Mode)</div>
           <div class="meta-item"><strong>Publisher:</strong> MR Software Studio</div>
           <div class="meta-item"><strong>Effective Date:</strong> November 11, 2026</div>
           <div class="meta-item"><strong>Last Updated:</strong> November 11, 2026</div>
@@ -502,173 +500,152 @@
       </div>
 
       <div class="callout callout-green">
-        <span class="callout-title">Core Architecture Summary (Verified Against Codebase)</span>
-        JobFill BD operates in <strong>Local-Only mode by default</strong> (<code>cloudSyncEnabled: false</code>, no account required). Applicant profiles, academic history, work records, uploaded photos/signatures/certificates, bookmarks, and application tracker logs are stored locally in your browser. Optional remote cloud backup occurs only if you explicitly configure your own Supabase backend and turn on Cloud Sync, and public job circular checks perform read-only HTTP <code>GET</code> requests without your saved profile data.
+        <span class="callout-title">Local-Only First Release Summary (Version 2.0.0 &mdash; Cloud Sync Disabled)</span>
+        In <strong>JobFill BD v2.0.0</strong> (the first public release for Microsoft Edge Add-ons and Google Chrome), <strong>all personal applicant profiles, education/employment records, uploaded photos, signatures, certificates, bookmarks, application tracker entries, and autofill logs are stored strictly on your device</strong> inside local encrypted browser storage. Online user accounts and Cloud Sync are <strong>completely disabled and inactive</strong> in this release (<code>__JOBFILL_CLOUD_SYNC_DISABLED__=true</code>), so no profile data or personal files are uploaded to any developer backend or cloud server. Public job circular discovery requires <strong>Internet access</strong> and performs read-only HTTP <code>GET</code> requests (<code>credentials: 'omit'</code>) with <strong>zero</strong> personal data.
       </div>
 
       <section id="overview">
         <h2>1. Introduction, Overview &amp; Scope</h2>
         <p>
-          This Privacy Policy explains how <strong>MR Software Studio</strong> handles information inside the <strong>JobFill BD</strong> Manifest V3 browser extension (compatible with Google Chrome and Microsoft Edge, version 2.0.0). JobFill BD is built to help Bangladeshi job applicants organize application profiles, resize and validate photos/signatures locally, discover public job circulars, track application deadlines, and fill supported recruitment web forms under explicit user review.
+          This Privacy Policy explains how <strong>MR Software Studio</strong> processes and safeguards user information inside the <strong>JobFill BD</strong> Manifest V3 browser extension (<code>v2.0.0</code>). JobFill BD helps Bangladeshi job applicants organize application profiles, resize and validate photographs and signatures locally, discover official public job circulars, track application deadlines, and semi-automatically fill recruitment forms under explicit user review.
         </p>
         <p>
-          This document describes only the actual behavior implemented in JobFill BD's source code. This static webpage itself executes <strong>no external JavaScript</strong>, sets <strong>no cookies</strong>, uses <strong>no analytics or tracking scripts</strong>, and contains <strong>no forms collecting personal information</strong>.
+          This policy is published publicly at <code>https://mahfuzar148.github.io/jobfill-bd-privacy/</code> and bundled identically inside the extension package (<code>privacy.html</code>). This page runs <strong>zero JavaScript</strong>, sets <strong>zero cookies</strong>, loads <strong>no external fonts or analytics</strong>, and contains <strong>no forms</strong>.
         </p>
       </section>
 
       <section id="local-storage">
-        <h2>2. Data Collected, Accessed &amp; Local Storage</h2>
+        <h2>2. Data Stored Locally &amp; Exact Browser Mechanisms</h2>
         <p>
-          In default Local-Only mode, all user-entered application records reside strictly on your device inside browser storage managed by the extension:
+          Every user-created application record in JobFill BD v2.0.0 resides inside browser-isolated local storage on your device:
         </p>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Local Storage Mechanism</th>
-                <th>Store / Key Names</th>
-                <th>What Is Stored</th>
+                <th>Browser Storage Mechanism</th>
+                <th>Stores / Key Names</th>
+                <th>Contents &amp; Protection</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Browser IndexedDB (<code>JobFillBD_SecureStorage</code>, Schema v8)</td>
                 <td><code>encrypted_vault</code>, <code>education_records</code>, <code>experience_records</code>, <code>documents</code></td>
-                <td>Encrypted profile vault bundles, individually encrypted academic &amp; employment records, and encrypted photos/signatures/certificates (plus local non-extractable Web Crypto <code>CryptoKey</code> objects when Master Password is not enabled).</td>
+                <td>AES-256-GCM encrypted applicant profile vault blobs, individually encrypted academic &amp; employment rows, and encrypted photos, signatures, and certificates (plus a local non-extractable Web Crypto <code>CryptoKey</code> when a custom passphrase is not enabled).</td>
               </tr>
               <tr>
-                <td>Browser IndexedDB (Activity, History &amp; Job Cache)</td>
+                <td>Browser IndexedDB (Circulars, Bookmarks &amp; Local Logs)</td>
                 <td><code>jobs</code>, <code>govt_orgs</code>, <code>bookmarks</code>, <code>applications</code>, <code>notifications</code>, <code>search_index</code>, <code>sync_history</code>, <code>source_health</code>, <code>history</code>, <code>migration_logs</code>, <code>profiles</code>, <code>mappings</code></td>
-                <td>Cached public job circulars, source health outcomes, job bookmarks, application status notes, notification history, and local autofill audit logs (up to the most recent 100 autofill sessions, with NID/passport/birth registration numbers masked to the last 4 characters and URL query/hash strings stripped).</td>
+                <td>Cached public job circulars, source health statuses, saved bookmarks, personal application status notes, notification history, and locally stored autofill logs (capped at the 100 most recent sessions, with NID/passport/birth registration numbers masked to the last 4 characters and URL query/hash strings stripped).</td>
               </tr>
               <tr>
-                <td><code>chrome.storage.local</code> (and <code>localStorage</code> fallback in non-extension contexts)</td>
-                <td><code>jobfill_security_settings</code>, <code>jobfill_active_profile_id</code>, <code>jobfill_general_settings</code>, <code>jobfill_adaptive_mapping_memory</code>, <code>jobfill_job_preferences_v1</code>, <code>jobfill_cloud_config_v1</code>, <code>jobfill_language</code>, <code>jobfill_theme</code>, <code>jobfill_onboarded</code></td>
-                <td>Vault lock settings (PBKDF2 salt &amp; password hash when enabled, auto-lock timeout, last backup timestamp), active profile ID, language/theme/fill preferences, learned DOM field selector fingerprints (domain + selector signature without field values), job filter/reminder settings (plus optional ReliefWeb appname), and optional Supabase configuration (URL, public anon key, authenticated email label, last sync timestamp).</td>
+                <td><code>chrome.storage.local</code></td>
+                <td><code>jobfill_security_settings</code>, <code>jobfill_active_profile_id</code>, <code>jobfill_general_settings</code>, <code>jobfill_adaptive_mapping_memory</code>, <code>jobfill_job_preferences_v1</code>, <code>jobfill_language</code>, <code>jobfill_theme</code>, <code>jobfill_onboarded</code></td>
+                <td>Vault lock configuration (PBKDF2 salt and verifier hash when enabled, auto-lock timeout, last backup timestamp), selected profile ID, UI preferences (language/theme), learned CSS selector fingerprints (hostname + DOM selector structure without saved field values), and local circular filter/reminder preferences.</td>
               </tr>
               <tr>
-                <td><code>chrome.storage.session</code> (or tab <code>sessionStorage</code> fallback)</td>
+                <td><code>chrome.storage.session</code></td>
                 <td>Per-tab dismissed toolbar state</td>
-                <td>Temporary flag remembering if you dismissed the floating assistant on a specific open browser tab; cleared when the tab or browser session closes.</td>
+                <td>Ephemeral in-memory session flag remembering whether you closed the floating toolbar on an open browser tab; discarded automatically when the tab or browser closes.</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
-          Runtime diagnostics (<code>diagnostics.ts</code>) keep an in-memory buffer of at most 50 recent coarse operational counters and origin hostnames only (never full URLs, query parameters, tokens, or form field inputs) and are never sent to external servers.
+          Local runtime diagnostics keep at most 50 coarse operational counters and hostnames in volatile memory only (never full URLs, query tokens, passwords, or form inputs) and are never transmitted externally.
         </p>
       </section>
 
       <section id="personal-profile">
         <h2>3. Personal Profile Information</h2>
-        <p>When you create one or more local applicant profiles, you may voluntarily save the following categories defined in the extension's profile schema:</p>
+        <p>If you choose to create local applicant profiles inside the Dashboard, you may save:</p>
         <ul>
-          <li><strong>Identity &amp; Family Details:</strong> Full name (English and Bengali), father's name (English/Bengali), mother's name (English/Bengali), spouse's name (if applicable), date of birth, gender, nationality, marital status, and religion (used only where government forms request it).</li>
-          <li><strong>Government Identifiers &amp; Quotas:</strong> National ID (NID), Birth Registration Number, Passport number and expiry date, quota category, freedom-fighter or disability certificate references, and departmental/employment status.</li>
-          <li><strong>Contact &amp; Address Information:</strong> Mobile number, confirmation mobile, email address, and present/permanent addresses (care of, village/road/house/flat, division, district, upazila, post office, post code).</li>
-          <li><strong>Recruitment-Specific Metadata &amp; Referees:</strong> Physical measurements (height, weight, chest), blood group, exam center, question version, cadre/non-cadre/organization choices, and referee names, designations, organizations, phone numbers, and emails.</li>
+          <li><strong>Identity &amp; Family Details:</strong> Applicant name (English/Bengali), father's and mother's names (English/Bengali), spouse's name (if applicable), date of birth, gender, nationality, marital status, and religion (only where requested by public recruitment portals).</li>
+          <li><strong>Government Identifiers &amp; Quota Information:</strong> National ID (NID), Birth Registration Number, Passport number and expiry date, quota category, freedom-fighter or disability quota/certificate details, and departmental/employment status.</li>
+          <li><strong>Contact &amp; Postal Addresses:</strong> Mobile number, confirm mobile, email address, and present/permanent addresses (care of, village/road/house/flat, division, district, upazila, post office, post code).</li>
+          <li><strong>Recruitment-Specific &amp; Referee Attributes:</strong> Height, weight, chest measurements, blood group, exam center, question version, cadre/non-cadre/organization preferences, and referee contact details.</li>
         </ul>
       </section>
 
       <section id="education-employment">
         <h2>4. Education &amp; Employment Information</h2>
-        <p>You may store structured academic and career records inside your local profile and normalized IndexedDB stores:</p>
         <ul>
-          <li><strong>Secondary &amp; Higher Secondary (SSC / HSC):</strong> Examination name, education board, institution, roll number, registration number, group/subject, result type, GPA/scale, and passing year.</li>
-          <li><strong>Higher Education &amp; Additional Qualifications:</strong> Graduation and Masters degrees, subject/major, university/institute, college, student ID/roll/registration/session, CGPA/result, course duration, appeared status, exam dates, and training/diploma/computer/language skills.</li>
-          <li><strong>Job Experience:</strong> Employer category (government, semi-government, autonomous, private, NGO, etc.), organization name, designation, employer address, start/end dates, current work status, salary, and job responsibilities.</li>
+          <li><strong>Secondary &amp; Higher Secondary (SSC / HSC):</strong> Examination name, board, institution, roll number, registration number, group/subject, result type, GPA/scale, and passing year.</li>
+          <li><strong>Higher Education &amp; Additional Qualifications:</strong> Graduation/Masters degree titles, major/subject, university/college, student ID/roll/registration/session, CGPA, course duration, appeared status, exam dates, and training/diploma/language skills.</li>
+          <li><strong>Employment History:</strong> Organization type, employer name, designation, work address, start/end dates, current employment flag, salary, and job responsibilities.</li>
         </ul>
-        <p>When saved via the active IndexedDB encryption path, records in <code>education_records</code> and <code>experience_records</code> are stored as encrypted ciphertexts rather than plaintext rows.</p>
+        <p>Normalized records stored in <code>education_records</code> and <code>experience_records</code> are persisted as AES-256-GCM ciphertexts inside IndexedDB.</p>
       </section>
 
       <section id="documents-media">
         <h2>5. Documents, Photos &amp; Signatures</h2>
-        <p>You may upload files into the local document manager for job application readiness:</p>
         <ul>
-          <li><strong>Supported Categories:</strong> Applicant Photograph (<code>photo</code>), Applicant Signature (<code>signature</code>), National ID (<code>nid</code>), Birth Certificate (<code>birth_certificate</code>), Educational Certificate (<code>educational_certificate</code>), and Other supporting files (<code>other</code>).</li>
-          <li><strong>Local Image Processing:</strong> Photo resizing/cropping (e.g., 300&times;300 px) and signature formatting (e.g., 300&times;80 px) run entirely client-side via HTML5 Canvas (<code>ImageProcessor</code>), saving a separate processed variant without overwriting your original upload or uploading image bytes externally.</li>
-          <li><strong>Storage &amp; Cloud Exclusion:</strong> Plaintext <code>dataUrl</code> image payloads are omitted from IndexedDB persistence; payloads are stored encrypted with AES-256-GCM inside the <code>documents</code> store. <strong>Uploaded documents are strictly local-only in version 2.0.0</strong> and are never uploaded when optional Cloud Sync is used.</li>
+          <li><strong>Supported File Types:</strong> Applicant Photograph, Signature, National ID card scan, Birth Certificate, Educational Certificate, and Other supporting files.</li>
+          <li><strong>Client-Side Image Processing:</strong> Photo resizing (such as 300&times;300 px) and signature sizing (such as 300&times;80 px) run offline inside your browser using HTML5 Canvas, storing a processed copy while keeping your original file untouched.</li>
+          <li><strong>Local Encryption &amp; Explicit Attachment:</strong> Plaintext image Data URLs are stripped before saving to IndexedDB; image bytes are encrypted at rest via AES-256-GCM and attached to a webpage file input only after you explicitly review and click approve.</li>
         </ul>
       </section>
 
       <section id="autofill-access">
-        <h2>6. Autofill &amp; Active Webpage Access</h2>
-        <p>JobFill BD interacts with recruitment web pages solely to help you scan form controls and insert your saved information cleanly:</p>
+        <h2>6. Active Webpage DOM Access &amp; Autofill Behavior</h2>
+        <p>JobFill BD inspects form elements on open web pages solely to help you populate your saved application details accurately:</p>
         <ul>
-          <li><strong>Where Scripts Can Run:</strong> Declared content scripts target Bangladeshi government, educational, banking, and recruitment domains (<code>*.teletalk.com.bd</code>, <code>*.gov.bd</code>, <code>*.bb.org.bd</code>, <code>*.org.bd</code>, <code>*.ac.bd</code>, <code>*.edu.bd</code>, <code>*.bdjobs.com</code> in store packages). On other websites, the extension injects and accesses the active tab <strong>only after you explicitly interact</strong> (clicking the extension popup/action button and granting browser host permission via <code>activeTab</code> / <code>optional_host_permissions</code> when requested).</li>
-          <li><strong>Strict Exclusions:</strong> Content scripts are statically excluded in <code>manifest.json</code> and blocked at runtime (<code>site-policy.ts</code>) on Google Meet, Zoom, YouTube, Google Accounts/Mail/Docs/Drive/Calendar, and internal browser pages (<code>chrome://</code>, <code>edge://</code>, store pages). JobFill BD never hooks <code>getUserMedia</code>, <code>RTCPeerConnection</code>, page <code>fetch</code>, or <code>XMLHttpRequest</code>.</li>
-          <li><strong>User-Reviewed Filling &amp; Document Transfer:</strong> Form scanning and field matching happen deterministically inside your browser (with zero calls to external AI services). Values are placed into webpage inputs and file inputs receive approved document blobs (<code>GET_APPROVED_DOCUMENT_PAYLOAD</code>) only after you trigger/review and approve them. If a portal serves a form over unencrypted <code>http://</code>, an explicit confirmation warning dialog prompts you before placing sensitive fields (such as NID, birth registration, passport, date of birth, mobile, or email).</li>
-          <li><strong>No Automatic Submission or Security Bypass:</strong> JobFill BD <strong>never</strong> clicks "Final Submit", declaration checkboxes outside reviewed profile fields, or payment buttons, and <strong>never</strong> solves or bypasses CAPTCHA or SMS/OTP challenges.</li>
+          <li><strong>Where Scripts Operate:</strong> Bundled content scripts run automatically only on declared Bangladeshi recruitment domains (<code>*.teletalk.com.bd</code>, <code>*.gov.bd</code>, <code>*.bb.org.bd</code>, <code>*.org.bd</code>, <code>*.ac.bd</code>, <code>*.bdjobs.com</code>). On any custom non-declared career website, scripts run only after you explicitly click the JobFill BD popup/action and grant per-site access via <code>activeTab</code> / <code>optional_host_permissions</code>.</li>
+          <li><strong>Strict Safety Exclusions:</strong> Google Meet, Zoom, YouTube, Google Workspace/Accounts (Mail, Drive, Docs, Calendar, Login), and internal browser pages (<code>chrome://</code>, <code>edge://</code>, extension stores) are blocked statically in <code>manifest.json</code> (15 exclusion patterns) and dynamically in runtime policy checks. JobFill BD never hooks <code>getUserMedia</code>, <code>getDisplayMedia</code>, <code>RTCPeerConnection</code>, page <code>fetch</code>, or <code>XMLHttpRequest</code>.</li>
+          <li><strong>Human-in-the-Loop Protection:</strong> Deterministic local matching runs inside your browser with zero external AI calls. Filling sensitive fields over unencrypted <code>http://</code> portals triggers a warning overlay requiring explicit confirmation. JobFill BD <strong>never</strong> clicks Final Submit or Pay Now buttons, and <strong>never</strong> fills or bypasses CAPTCHA or OTP challenges.</li>
         </ul>
       </section>
 
       <section id="public-job-sources">
         <h2>7. Public Job Circular Source Requests</h2>
-        <p>To keep the Job Circular Hub up to date, JobFill BD checks public recruitment notices on manual refresh or scheduled MV3 background alarms:</p>
+        <p>Retrieving public job circulars and official deadlines <strong>requires an active Internet connection</strong> on manual refresh or scheduled MV3 background alarms:</p>
         <ul>
-          <li><strong>Read-Only Requests Without Profile Data:</strong> All background job circular requests use <code>singlePublicGet()</code> with HTTP <code>GET</code> and <code>credentials: 'omit'</code>. They <strong>do not intentionally include</strong> your saved profile fields, National ID, uploaded files, cookies, or authentication tokens.</li>
-          <li><strong>Configured Public Sources (13 Adapters):</strong> Requests target public endpoints on Teletalk Alljobs (<code>alljobs.teletalk.com.bd</code>), Bangladesh National Portal &amp; listed ministry/university notice pages (<code>bangladesh.gov.bd</code>, <code>mopa.gov.bd</code>, <code>dshe.gov.bd</code>, <code>doict.gov.bd</code>, <code>dme.gov.bd</code>, <code>techedu.gov.bd</code>, <code>dghs.gov.bd</code>, <code>cabinet.gov.bd</code>, <code>mof.gov.bd</code>, <code>www.du.ac.bd</code>, <code>www.buet.ac.bd</code>, <code>petrobangla.org.bd</code>), BPSC (<code>bpsc.gov.bd</code>), Bangladesh Bank (<code>erecruitment.bb.org.bd</code>), NTRCA (<code>ntrca.gov.bd</code>), DPE (<code>dpe.gov.bd</code>), Bdjobs public static GovtJobs JSON (<code>storage.googleapis.com</code>), Google News RSS feeds (<code>news.google.com</code>), Remotive (<code>remotive.com</code>), Remote OK (<code>remoteok.com</code>), Himalayas (<code>himalayas.app</code>), Arbeitnow (<code>www.arbeitnow.com</code>), and ReliefWeb API v2 (<code>api.reliefweb.int</code> — only if you enter your own approved free ReliefWeb <code>appname</code> parameter in Preferences, which is passed in the query string).</li>
-          <li><strong>Anti-Bot &amp; CAPTCHA Respect Policy:</strong> If any portal returns an anti-bot or CAPTCHA challenge page (such as Bangladesh Bank challenge gates), automated extraction stops immediately without attempting to bypass the gate, switches to manual review guidance, and enters cooldown backoff.</li>
+          <li><strong>Read-Only GET Requests With Zero PII:</strong> Job fetching uses unauthenticated HTTP <code>GET</code> requests with <code>credentials: 'omit'</code>. No applicant profile data, NID, phone number, email, document file, or session cookie is included in public job requests.</li>
+          <li><strong>Approved Configured Sources:</strong> Public circular adapters query public endpoints on Teletalk Alljobs (<code>alljobs.teletalk.com.bd</code>), Bangladesh National Portal &amp; ministry/university portals (<code>bangladesh.gov.bd</code>, <code>mopa.gov.bd</code>, <code>dshe.gov.bd</code>, <code>doict.gov.bd</code>, <code>dme.gov.bd</code>, <code>techedu.gov.bd</code>, <code>dghs.gov.bd</code>, <code>cabinet.gov.bd</code>, <code>mof.gov.bd</code>, <code>www.du.ac.bd</code>, <code>www.buet.ac.bd</code>, <code>petrobangla.org.bd</code>), BPSC (<code>bpsc.gov.bd</code>), Bangladesh Bank (<code>erecruitment.bb.org.bd</code>), NTRCA (<code>ntrca.gov.bd</code>), DPE (<code>dpe.gov.bd</code>), Bdjobs static JSON (<code>storage.googleapis.com</code>), Google News RSS feeds (<code>news.google.com</code>), Remotive, Remote OK, Himalayas, Arbeitnow, and optional ReliefWeb API v2 (<code>api.reliefweb.int</code> — active only if you optionally enter your own approved ReliefWeb <code>appname</code> in Preferences, which is sent as a query parameter solely to ReliefWeb).</li>
+          <li><strong>Anti-Bot &amp; CAPTCHA Respect:</strong> Automated job fetching stops immediately and enters backoff whenever a portal serves a CAPTCHA or anti-bot challenge.</li>
         </ul>
       </section>
 
-      <section id="cloud-sync">
-        <h2>8. Optional Supabase Authentication &amp; Encrypted Cloud Sync</h2>
-        <p>
-          Optional cloud features connect to a <strong>Supabase</strong> backend only when you explicitly enter a Supabase Project URL (HTTPS) and public Anon Key in <strong>Security &amp; Backup</strong> and enable them. The extension blocks storing Supabase <code>service_role</code> keys inside client configuration.
-        </p>
-
-        <h3>A. Supabase Authentication (Opt-In Only)</h3>
-        <ul>
-          <li>When you sign up or sign in (<code>supabase-auth.ts</code>), your entered email address and password are sent over HTTPS to your configured Supabase Auth endpoints (<code>/auth/v1/signup</code> and <code>/auth/v1/token?grant_type=password</code>). Signing out notifies <code>/auth/v1/logout</code> when online.</li>
-          <li>Short-lived session access tokens are held in volatile runtime memory (never written to persistent extension storage), while your <code>authenticatedEmail</code> and Supabase URL/Anon Key are persisted locally in <code>chrome.storage.local</code> until signed out or cleared.</li>
-        </ul>
-
-        <h3>B. What Cloud Sync Encrypts &amp; Transmits</h3>
-        <p>When <strong>Cloud Sync</strong> is turned on and you trigger a vault upload with your local <strong>Sync Passphrase</strong>:</p>
-        <ul>
-          <li><strong>Client-Side End-to-End Encryption (E2EE) of Bundles:</strong> In <code>encrypted-sync-service.ts</code>, the extension serializes two JSON bundles in your browser—<strong><code>profiles_bundle</code></strong> (all local applicant profiles) and <strong><code>activity_bundle</code></strong> (job bookmarks and application tracker records)—and encrypts both client-side using Web Crypto PBKDF2-SHA256 (100,000 iterations, random 16-byte salt) + AES-256-GCM (random 12-byte IV). An envelope check (<code>assertValidCiphertextEnvelope</code>) blocks uploading non-encrypted data.</li>
-          <li><strong>Remote Storage Scope:</strong> The resulting AES-256-GCM ciphertext payloads, schema version, client timestamp, and <code>record_scope</code> (<code>profiles_bundle</code> or <code>activity_bundle</code>) are uploaded to your Supabase PostgreSQL table <code>user_vault_blobs</code>, isolated per account via Row Level Security (<code>auth.uid() = user_id</code> enforced by server triggers).</li>
-          <li><strong>Passphrase &amp; Non-E2EE Metadata Boundaries:</strong> Your Sync Passphrase is never transmitted to Supabase, so Supabase servers cannot decrypt the AES-256-GCM ciphertext payloads inside <code>profiles_bundle</code> or <code>activity_bundle</code>. However, authentication inputs (email/password during login or signup), user UUID, row metadata (<code>record_scope</code>, <code>schema_version</code>, <code>client_updated_at</code>, <code>updated_at</code>), and standard network metadata (IP address) are <strong>not</strong> end-to-end encrypted and are processed by the configured Supabase host. Uploaded documents (<code>documents_bundle</code>) are <strong>not uploaded</strong> in version 2.0.0.</li>
-        </ul>
-
-        <h3>C. Optional Shared Public Job Database Feed</h3>
-        <p>
-          If you separately enable <em>Read verified circulars from Shared Public Job Database</em> (<code>usePublicCloudJobsFeed</code>), <code>public-jobs-client.ts</code> performs unauthenticated read-only <code>GET</code> requests (<code>credentials: 'omit'</code>) to <code>/rest/v1/jobs</code> on the configured Supabase project to retrieve public approved job circulars. No personal profile data or user auth tokens are sent on these reads.
-        </p>
+      <section id="cloud-sync-disabled">
+        <h2>8. First Public Release Status: Local-Only Mode (Cloud Sync Disabled)</h2>
+        <div class="callout callout-info">
+          <span class="callout-title">Version 2.0.0 Status: Cloud Sync Disabled &amp; Inactive Across Store Builds</span>
+          <strong>JobFill BD v2.0.0</strong> is released strictly in <strong>Local-Only Mode</strong> (<code>__JOBFILL_CLOUD_SYNC_DISABLED__=true</code>) for both Microsoft Edge Add-ons and Google Chrome Web Store distributions. Online user registration, sign-in, Cloud Sync configuration screens, and Supabase remote uploads are <strong>completely disabled, hidden from the UI, and unreachable at compile time and runtime</strong>. Users cannot enable Supabase Cloud Sync in v2.0.0, and the extension transmits zero profile or activity bundles to any remote cloud server.
+        </div>
       </section>
 
       <section id="third-party-transfers">
-        <h2>9. Third-Party Service Providers &amp; Data Transfers</h2>
+        <h2>9. Third-Party Services &amp; Data Transfers</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>External Party</th>
+                <th>Party / Service</th>
                 <th>When Contacted</th>
                 <th>Data Involved</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Public Job Portals, RSS &amp; Job APIs</strong> (Bangladeshi gov/edu/org/bank domains, Bdjobs static JSON, Google News RSS, Remotive, Remote OK, Himalayas, Arbeitnow, optional ReliefWeb API v2)</td>
-                <td>On background circular check alarms or manual refresh in the Dashboard.</td>
-                <td>Unauthenticated <code>GET</code> requests (<code>credentials: 'omit'</code>); standard network/HTTP request headers and optional ReliefWeb <code>appname</code> query parameter if user-configured. No profile or document data.</td>
+                <td><strong>Public Job Circular Websites, RSS &amp; Job APIs</strong></td>
+                <td>When checking public circulars via Dashboard refresh or scheduled alarm (requires Internet access).</td>
+                <td>Unauthenticated HTTP <code>GET</code> (<code>credentials: 'omit'</code>) with standard browser network headers and optional ReliefWeb <code>appname</code> if entered by you. Zero profile or document data.</td>
               </tr>
               <tr>
-                <td><strong>Destination Recruitment Websites</strong> (open in your browser tab)</td>
-                <td>When you review and apply autofill, then manually submit the webpage form.</td>
-                <td>Only the approved form values and approved files you place on that webpage and choose to submit to that hiring organization's portal.</td>
+                <td><strong>Destination Recruitment Portals</strong></td>
+                <td>Only when you explicitly review, trigger autofill on the open portal tab, and manually submit your form.</td>
+                <td>Only the form inputs and explicitly approved files that you choose to place into that third-party portal and submit yourself.</td>
               </tr>
               <tr>
-                <td><strong>Supabase Cloud Backend</strong> (user-configured project URL)</td>
-                <td>Only if you explicitly configure Supabase and enable Cloud Sync and/or Public Cloud Job Feed.</td>
-                <td>Auth email/password (at login/signup), client-encrypted <code>profiles_bundle</code> and <code>activity_bundle</code> ciphertexts, database sync metadata/timestamps, and public job query parameters.</td>
+                <td><strong>Cloud Sync / Account Servers (e.g. Supabase)</strong></td>
+                <td><strong>Never</strong> in v2.0.0.</td>
+                <td><strong>None.</strong> Disabled and excluded from v2.0.0 builds.</td>
               </tr>
               <tr>
-                <td><strong>Advertising, Analytics, Data Brokers, External AI APIs</strong></td>
+                <td><strong>Analytics, Advertising, Tracking, Data Brokers &amp; External AI APIs</strong></td>
                 <td>Never.</td>
-                <td><strong>None.</strong> JobFill BD bundles all UI/matching logic locally and transmits zero telemetry, ad IDs, crash reports, or AI prompts to third parties.</td>
+                <td><strong>None.</strong> Zero analytics SDKs, telemetry pings, advertising trackers, creditworthiness checks, or external AI transmissions exist.</td>
               </tr>
             </tbody>
           </table>
@@ -678,89 +655,75 @@
       <section id="encryption-security">
         <h2>10. Encryption &amp; Security Practices</h2>
         <ul>
-          <li><strong>Web Crypto AES-256-GCM at Rest:</strong> Profiles, normalized <code>education_records</code>, <code>experience_records</code>, and uploaded <code>documents</code> in IndexedDB are encrypted using AES-256-GCM with 12-byte random IVs. By default, keys are generated as non-extractable <code>CryptoKey</code> objects (<code>extractable: false</code>) stored natively in IndexedDB.</li>
-          <li><strong>Optional Master Vault Password:</strong> Enabling a Master Vault Password derives keys client-side via 100,000 iterations of PBKDF2-SHA256 with a random 16-byte salt. Your plaintext password is never written to disk; only a PBKDF2 hash and salt are stored to verify unlocking. Unlocked keys remain only in volatile memory (<code>KeyManager</code>) and clear on manual lock, sign-out, or inactivity auto-lock (configurable; default 15 minutes).</li>
-          <li><strong>Least-Privilege Code Hygiene:</strong> Extension pages enforce strict Content Security Policy (<code>script-src 'self'; object-src 'self';</code>), block <code>eval()</code> / <code>new Function()</code> / <code>XMLHttpRequest</code> / <code>navigator.sendBeacon</code>, mask sensitive numbers in local logs (<code>PrivacyController</code>, <code>maskSensitiveHistoryValue</code>), and strip query parameters/tokens from autofill history URLs.</li>
-          <li><strong>Honest Scope Notes:</strong> Non-sensitive UI settings, PBKDF2 verification salt/hash metadata, adaptive CSS selector fingerprints, and optional cloud endpoint settings (URL, public anon key, email display label) are stored unencrypted in browser local storage so the extension UI can operate. In constrained non-IndexedDB test fallback environments without Web Crypto key storage, a legacy fallback path uses AES-GCM with a locally stored secret key.</li>
+          <li><strong>AES-256-GCM Local Encryption:</strong> Sensitive applicant data, normalized academic/employment rows, and document files in IndexedDB are encrypted using Web Crypto AES-256-GCM with 12-byte random initialization vectors (IVs).</li>
+          <li><strong>Key Derivation &amp; Vault Lock:</strong> By default, a non-extractable device <code>CryptoKey</code> resides inside IndexedDB. When you set an optional Master Vault Password, keys are derived locally via 100,000 iterations of PBKDF2-SHA256 with a random 16-byte salt; your raw password is never written to storage, and unlocked keys exist only in transient memory until locked manually or after your auto-lock timeout (default 15 minutes).</li>
+          <li><strong>Code Hygiene &amp; Masked Logs:</strong> Bundled extension pages enforce Content Security Policy (<code>script-src 'self'; object-src 'self';</code>), contain zero <code>eval()</code> or remote script loads, mask sensitive digits in local logs, and strip URL query/hash parameters before writing autofill history.</li>
         </ul>
-        <div class="callout callout-warn">
-          <span class="callout-title">Zero-Knowledge Passphrase Recovery Limitation</span>
-          If you enable a Master Vault Password, encrypted JSON backup passphrase, or Cloud Sync passphrase and lose both your passphrase and unencrypted backup files, neither JobFill BD nor MR Software Studio has any server-side backdoor or master key to recover your encrypted data.
-        </div>
       </section>
 
-      <section id="consent-opt-in">
-        <h2>11. User Consent &amp; Cloud Sync Opt-In / Opt-Out</h2>
+      <section id="consent-controls">
+        <h2>11. User Consent &amp; Operating Controls</h2>
         <ul>
-          <li><strong>Opt-In Architecture:</strong> Cloud Sync and the Public Cloud Jobs Feed are both disabled by default (<code>false</code>). No remote Supabase connection is established unless you enter your endpoint credentials and enable those controls in <strong>Security &amp; Backup</strong>.</li>
-          <li><strong>Granular Action Control:</strong> Even after configuring Supabase, uploading and restoring vault data happen only when you click upload/sync or preview &amp; pull with your sync passphrase (<code>previewCloudVaultPull</code> lets you inspect remote counts and choose <code>merge</code> or <code>replace</code> conflict handling before overwriting local data).</li>
-          <li><strong>Opting Out Anytime:</strong> You can toggle off Cloud Sync, disable the Public Cloud Jobs Feed, click <strong>Sign Out</strong> (which clears your in-memory JWT and locks the vault), or click <strong>Delete Cloud Data</strong> at any time and continue using JobFill BD locally.</li>
+          <li><strong>Explicit Tab Permission &amp; Review:</strong> Custom non-declared websites are accessed only after user interaction and explicit browser permission confirmation.</li>
+          <li><strong>Insecure HTTP Guardrail:</strong> Placing sensitive personal identifiers onto legacy non-HTTPS pages requires acknowledging an explicit confirmation warning dialog.</li>
+          <li><strong>No Hidden Cloud Uploads:</strong> Because Cloud Sync is disabled in v2.0.0, all data stays strictly local by design.</li>
         </ul>
       </section>
 
       <section id="retention-deletion">
         <h2>12. Data Retention &amp; Deletion</h2>
-        <p>MR Software Studio does not operate a centralized retention timer for your local device files; actual persistence follows your browser and database actions:</p>
         <ul>
-          <li><strong>Local Device Retention:</strong> Local profiles, documents, bookmarks, and application tracker entries remain in your browser profile until you delete them or uninstall the extension. Local autofill audit history caps at the 100 most recent sessions; in-memory diagnostics hold up to 50 hostname-only events and vanish when the extension worker/tab unloads.</li>
-          <li><strong>In-Extension Deletion Controls:</strong> Inside <strong>Security &amp; Backup</strong>, <strong>Delete Local Private Vault Data</strong> (<code>deleteLocalUserData()</code>) clears all uploaded documents, profiles, education/experience records, vault keys, bookmarks, application tracker entries, notifications, and autofill history while preserving cached public job circulars. <strong>Purge All Profiles &amp; Data</strong> (<code>purgeAllData()</code>) erases every IndexedDB store and extension storage key completely.</li>
-          <li><strong>Cloud Vault Deletion Boundary:</strong> Clicking <strong>Delete Cloud Data</strong> (<code>deleteAllPrivateCloudData()</code>) while signed in issues authenticated HTTP <code>DELETE</code> calls to remove your rows from <code>user_vault_blobs</code> and <code>user_sync_devices</code> on the configured Supabase project and resets local cloud sync status. Deleting the underlying Supabase Auth login user record itself is not performed automatically by that button; it requires invoking the optional <code>delete-account</code> Supabase Edge Function (if deployed on your Supabase backend) or deleting the auth user directly in your Supabase project dashboard.</li>
+          <li><strong>Local Retention Limits:</strong> Profiles, documents, bookmarks, and application tracker records remain on your device until deleted by you or upon uninstalling JobFill BD. Local autofill history caps at 100 sessions; in-memory diagnostics cap at 50 hostname-only records.</li>
+          <li><strong>Instant In-App Deletion:</strong> In <strong>Security &amp; Backup</strong>, <strong>Delete Local Private Vault Data</strong> (<code>deleteLocalUserData()</code>) deletes profiles, documents, vault keys, bookmarks, applications, notifications, and autofill logs while retaining public job listings; <strong>Purge All Profiles &amp; Data</strong> (<code>purgeAllData()</code>) wipes every IndexedDB object store and extension storage key cleanly.</li>
+          <li><strong>Extension Removal:</strong> Uninstalling the extension removes all extension-owned browser storage.</li>
         </ul>
       </section>
 
       <section id="backup-restore">
         <h2>13. Backup &amp; Restore</h2>
         <ul>
-          <li><strong>Manual Local Export:</strong> You can export your applicant profiles to a <code>.json</code> file on your computer using <code>exportProfileData()</code>, choosing either an <strong>AES-256-GCM password-encrypted backup</strong> (recommended) or an unencrypted JSON export. Exporting updates the local <code>lastBackupAt</code> metadata timestamp.</li>
-          <li><strong>Restore Validation:</strong> Importing a backup file (<code>importProfileData()</code>) validates required profile schema structure locally and asks for the backup password if <code>isEncrypted</code> is true.</li>
-          <li><strong>Scope Note:</strong> Profile JSON backups cover your profile, address, education, and experience fields; binary uploaded files (photos, signatures, certificates) remain inside local browser IndexedDB rather than the JSON profile export bundle. Any backup file you download to disk is protected by your device's file security and, if enabled, your chosen backup passphrase.</li>
+          <li><strong>Offline Local Export:</strong> Export your applicant profiles to a local <code>.json</code> file anytime, choosing either a <strong>PBKDF2 + AES-256-GCM password-encrypted backup</strong> (recommended) or unencrypted JSON.</li>
+          <li><strong>Local Schema-Validated Restore:</strong> Restoring a JSON backup runs offline with schema verification and passphrase decryption in browser memory.</li>
         </ul>
       </section>
 
       <section id="notifications">
         <h2>14. Notifications &amp; Job Reminders</h2>
-        <p>JobFill BD uses Manifest V3 browser alarms and desktop notifications to keep you informed about job circulars:</p>
         <ul>
-          <li><strong>Local Scheduling (<code>chrome.alarms</code>):</strong> <code>JobAlarmManager</code> runs two alarms—a periodic 6-hour / daily digest alarm (<code>jobfill_daily_job_check</code>, default 9:00 AM <code>Asia/Dhaka</code>) and a single consolidated deadline alarm (<code>jobfill_deadline_scheduler</code>) for upcoming deadlines.</li>
-          <li><strong>Local Filtering &amp; Storage:</strong> Preference matching (preferred categories, organizations, locations, employment type, work mode, education level, minimum salary, include/exclude keywords) runs locally on your cached circulars inside the browser. Notification items are saved in IndexedDB (<code>notifications</code> store), and desktop alerts are rendered via <code>chrome.notifications</code>. Clicking a notification focuses or opens the extension Dashboard directly to that circular.</li>
+          <li><strong>MV3 Alarms &amp; Local Filtering:</strong> Scheduled circular checks (<code>jobfill_daily_job_check</code>, default 9:00 AM <code>Asia/Dhaka</code>) and consolidated deadline reminders (<code>jobfill_deadline_scheduler</code>) filter cached circulars against your local preferences and trigger standard desktop notifications via <code>chrome.notifications</code>.</li>
         </ul>
       </section>
 
       <section id="permissions">
-        <h2>15. Browser Permissions &amp; Purposes</h2>
-        <p>In accordance with least-privilege principles, JobFill BD declares the following permissions in <code>manifest.json</code>:</p>
+        <h2>15. Manifest V3 Browser Permissions &amp; Purposes</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
                 <th>Declared Permission</th>
-                <th>Purpose in JobFill BD</th>
+                <th>Purpose in JobFill BD v2.0.0</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><code>storage</code></td>
-                <td>Stores local preferences, vault lock/salt metadata, learned selector fingerprints, and optional cloud configuration keys locally.</td>
+                <td>Stores local preferences, Vault PBKDF2 salt/hash metadata, and non-value CSS selector fingerprints inside your browser.</td>
               </tr>
               <tr>
                 <td><code>activeTab</code> &amp; <code>scripting</code></td>
-                <td>Allows inspecting and filling form controls on the active tab when invoked by you, while excluding conferencing and Google Workspace sites.</td>
+                <td>Reads and fills form controls on the active recruitment tab when triggered by you, respecting all conferencing and Workspace exclusions.</td>
               </tr>
               <tr>
                 <td><code>alarms</code> &amp; <code>notifications</code></td>
-                <td>Schedules periodic circular refreshes, daily digests, and upcoming application deadline alerts locally in Manifest V3.</td>
+                <td>Runs scheduled daily public job circular checks and delivers optional deadline reminder notifications locally.</td>
               </tr>
               <tr>
-                <td><code>tabs</code></td>
-                <td>Focuses or opens your extension Dashboard tab without duplicates, opens selected official circulars, broadcasts vault-lock signals cleanly, and cleans up tab-level toolbar state when tabs close.</td>
-              </tr>
-              <tr>
-                <td><code>host_permissions</code> (Declared Bangladeshi &amp; Public Feed Domains)</td>
-                <td>Allows read-only background HTTP <code>GET</code> fetches from listed public job circular feeds/portals and form assistance on declared recruitment domains.</td>
+                <td><code>host_permissions</code> (Declared Bangladeshi recruitment portals &amp; public job feeds)</td>
+                <td>Enables unauthenticated read-only HTTP <code>GET</code> public job circular fetches (zero PII) and autofill readiness on listed official career portals. Unnecessary broad permissions such as <code>tabs</code> (&ldquo;Read your browsing history&rdquo;) and unused domain wildcards are intentionally omitted.</td>
               </tr>
               <tr>
                 <td><code>optional_host_permissions</code> (<code>https://*/*</code>, <code>http://*/*</code>)</td>
-                <td>Requests explicit per-site browser permission from you only if you activate autofill on a custom recruitment portal not listed in default domains.</td>
+                <td>Requests explicit one-time browser permission only when you activate autofill on a custom recruitment portal outside the pre-declared domain list.</td>
               </tr>
             </tbody>
           </table>
@@ -768,30 +731,30 @@
       </section>
 
       <section id="user-rights">
-        <h2>16. User Rights &amp; Privacy Controls</h2>
-        <p>You control all personal records handled by JobFill BD:</p>
+        <h2>16. User Rights &amp; Zero-Knowledge Recovery Notice</h2>
         <ul>
-          <li><strong>Access, Edit &amp; Multi-Profile Control:</strong> Inspect, edit, switch, or delete individual applicant profiles, qualifications, employment entries, bookmarks, and uploaded documents at any time inside the Dashboard.</li>
-          <li><strong>Autofill Safety &amp; Review Mode:</strong> Choose review-first filling, require confirmation before overwriting populated fields, approve or skip individual form fields and document uploads, and dismiss the floating assistant per tab.</li>
-          <li><strong>Security &amp; Sync Autonomy:</strong> Enable/change/disable a Master Vault Password, adjust inactivity auto-lock timing, use JobFill BD entirely without an account, or opt in/out of encrypted Supabase sync independently.</li>
-          <li><strong>Portability &amp; Erasure:</strong> Export local JSON backups, clear private local vault data, purge all extension storage, delete synced cloud vault rows, or uninstall the extension from your browser.</li>
+          <li><strong>Full Local Control:</strong> Inspect, edit, switch profiles, toggle Vault Lock, export local backups, or permanently delete all saved data inside the extension Dashboard anytime.</li>
         </ul>
+        <div class="callout callout-warn">
+          <span class="callout-title">Zero-Knowledge Passphrase Recovery Limitation</span>
+          Because MR Software Studio operates no server holding your keys or backups, if you enable a Master Vault Password or encrypted backup passphrase and lose both your passphrase and unencrypted backup files, your encrypted vault cannot be recovered.
+        </div>
       </section>
 
       <section id="contact">
-        <h2>17. Contact Information</h2>
-        <p>If you have questions about this Privacy Policy, data flows inside JobFill BD, or privacy requests regarding extension releases, please contact the publisher directly:</p>
+        <h2>17. Contact Information &amp; Official Policy URL</h2>
         <div class="contact-box">
           <p><strong>Publisher:</strong> MR Software Studio</p>
-          <p><strong>Product:</strong> JobFill BD (Browser Extension v2.0.0)</p>
+          <p><strong>Product:</strong> JobFill BD (Version 2.0.0 &mdash; Local-Only First Public Release)</p>
           <p><strong>Privacy &amp; Support Email:</strong> <a href="mailto:mahfuzar148@gmail.com">mahfuzar148@gmail.com</a></p>
+          <p><strong>Public HTTPS Privacy Policy:</strong> <code>https://mahfuzar148.github.io/jobfill-bd-privacy/</code></p>
         </div>
       </section>
     </main>
   </div>
 
   <footer class="policy-footer">
-    <div>&copy; 2026 MR Software Studio &mdash; JobFill BD Privacy Policy</div>
+    <div>&copy; 2026 MR Software Studio &mdash; JobFill BD Privacy Policy (v2.0.0 Local-Only First Release)</div>
     <div>Effective &amp; Last Updated: November 11, 2026</div>
   </footer>
 </body>

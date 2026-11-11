@@ -1,13 +1,15 @@
 # JobFill BD — Public Privacy Policy Website (`MR Software Studio`)
 
-Standalone static Privacy Policy website for **JobFill BD (v2.0.0)** by **MR Software Studio**, prepared for hosting via **GitHub Pages** and Microsoft Edge Add-ons Store privacy certification.
+Standalone static Privacy Policy website for **JobFill BD (v2.0.0 — First Public Release, Local-Only Storage Mode)** by **MR Software Studio**, prepared for hosting via **GitHub Pages** and Microsoft Edge Add-ons Store / Google Chrome Web Store privacy certification.
 
 - **Repository:** `https://github.com/Mahfuzar148/jobfill-bd-privacy`
 - **Git Remote:** `https://github.com/Mahfuzar148/jobfill-bd-privacy.git`
 - **Branch / Folder:** `main` -> `/ (root)` (`index.html`)
 - **Publisher:** MR Software Studio
 - **Contact:** [mahfuzar148@gmail.com](mailto:mahfuzar148@gmail.com)
-- **Expected GitHub Pages URL (after enabling Pages):** `https://mahfuzar148.github.io/jobfill-bd-privacy/`
+- **Live GitHub Pages URL:** `https://mahfuzar148.github.io/jobfill-bd-privacy/`
+
+> **v2.0.0 First Release Policy Scope:** Accurately documents strict Local-Only browser storage (AES-256-GCM IndexedDB Vault), active-tab autofill, read-only public job circular `GET` requests (`credentials: 'omit'`, zero PII), removal of broad `tabs` / unused `.edu.bd` permissions, and compile-time disabled/inactive Cloud Sync (`__JOBFILL_CLOUD_SYNC_DISABLED__=true`).
 
 ## Contents
 
